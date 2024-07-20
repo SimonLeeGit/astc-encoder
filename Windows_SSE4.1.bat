@@ -22,7 +22,7 @@ echo Generating solution (64-bit)...
 if exist "%UE_BUILD_PATH%" (rmdir "%UE_BUILD_PATH%" /s/q)
 mkdir "%UE_BUILD_PATH%"
 cd "%UE_BUILD_PATH%"
-"%_vsinstall%\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -G "Visual Studio 16 2019" -A x64 -DASTCENC_ISA_SSE41=ON -DCLI=ON "%PATH_TO_CMAKE_FILE%"
+"%_vsinstall%\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -G "Visual Studio 16 2019" -A x64 -DASTCENC_ISA_SSE41=ON -DASTCENC_CLI=ON "%PATH_TO_CMAKE_FILE%"
 
 echo Building astcenc solution for (64-bit, Release)...
 "%_msbuild%msbuild.exe" Source/ALL_BUILD.vcxproj /t:build /p:Configuration=Release
